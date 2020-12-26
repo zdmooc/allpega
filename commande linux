@@ -1,0 +1,452 @@
+sudo apt-get install virtualbox-6.1.16
+    3  sudo apt-get install virtualbox-6.1
+    4  java -version
+    5  sudo systemctl enable kafka
+    6  cd /opt/kafka/bin/
+    7  /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TutorialTopic --from-beginning
+    8  cat /opt/kafka/bin/kafka-server-start.sh
+    9  cat /opt/kafka/bin/kafka-server-stop.sh 
+   10  sudo systemctl start kafka
+   11  sudo systemctl status kafka
+   12  sudo systemctl start kafka
+   13  systemctl daemon-reload
+   14  sudo systemctl start kafka
+   15  sudo systemctl status kafka
+   16  cd ..
+   17  ls
+   18  cd /home/oem/
+   19  ls
+   20  cd 'VirtualBox VMs'/
+   21  ls
+   22  cd vm
+   23  ls
+   24  cat logs
+   25  ls
+   26  cd Logs/
+   27  ls
+   28  ls -l
+   29  sudo apt update
+   30  sudo apt upgrade
+   31  sudo apt install openjdk-11-jdk
+   32  java -version
+   33  wget https://downloads.apache.org/kafka/2.6.0/kafka_2.13-2.6.0.tgz
+   34  sudo tar xzf kafka_2.13-2.6.0.tgz
+   35  ls
+   36  sudo mv kafka_2.13-2.6.0 /opt/kafka
+   37  ls
+   38  sudo mv kafka_2.13-2.6.0.tgz ~/Downloads/
+   39  ls
+   40  sudo nano /etc/systemd/system/zookeeper.service
+   41  sudo nano /etc/systemd/system/kafka.service
+   42  java -version
+   43  cd /opt
+   44  ls
+   45  cd /etc/
+   46  ls
+   47  cd java-11-openjdk/
+   48  ls
+   49  cd /usr/
+   50  ls
+   51  cd bin/
+   52  ls
+   53  sudo systemctl daemon-reload
+   54  sudo systemctl enable --now zookeeper
+   55  java -version
+   56  sudo nano /etc/systemd/system/kafka.service
+   57  sudo systemctl enable --now kafka
+   58  cd /opt/kafka/
+   59  ls
+   60  sudo bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-f
+   61  sudo useradd kafka -m
+   62  sudo passwd kafka
+   63  sudo adduser kafka sudo
+   64  su -l kafka
+   65  ls
+   66  sudo nano /opt/kafka/config/server.properties 
+   67  sudo nano /etc/systemd/system/zookeeper.service
+   68  sudo nano /etc/systemd/system/kafka.service
+   69  sudo systemctl start kafka
+   70  systemctl daemon-reload
+   71  sudo systemctl start kafka
+   72  sudo journalctl -u kafka
+   73  systemctl daemon-reload
+   74  sudo systemctl start kafka
+   75  sudo systemctl start status
+   76  sudo systemctl  status kafka
+   77  sudo systemctl daemon-reload
+   78  sudo systemctl enable --now zookeeper
+   79  sudo systemctl enable --now kafka
+   80  sudo systemctl  status kafka
+   81  systemctl list-units --type=service 
+   82  systemctl stop kafka.service
+   83  systemctl list-units --type=service 
+   84  systemctl stop kafka
+   85  systemctl list-units --type=service 
+   86  sudo systemctl  status kafka
+   87  systemctl stop kafka.service
+   88  systemctl start kafka.service
+   89  systemctl status kafka.service
+   90  systemctl start kafka.service
+   91  systemctl daemon-reload
+   92  systemctl start kafka.service
+   93  systemctl status kafka.service
+   94  /bin/sh -c /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties 
+   95  systemctl status kafka.service
+   96  systemctl start kafka.service
+   97  systemctl status kafka.service
+   98  systemctl stop kafka.service
+   99  sudo systemctl stop kafka.service
+  100  sudo systemctl status kafka.service
+  101  dpkg --list
+  102  dpkg k --list 
+  103  dpkg  --list 
+  104  systemctl list-units --type=service 
+  105  cd ~
+  106  pwd
+  107  ls
+  108  curl "https://www.apache.org/dist/kafka/2.1.1/kafka_2.11-2.1.1.tgz" -o ~/Downloads/kafka.tgz
+  109  sudo apt install curl
+  110  curl "https://www.apache.org/dist/kafka/2.1.1/kafka_2.11-2.1.1.tgz" -o ~/Downloads/kafka.tgz
+  111  tar -xvzf ~/Downloads/kafka.tgz --strip 1
+  112  mkdir ~/kafka && cd ~/kafka
+  113  tar -xvzf ~/Downloads/kafka.tgz --strip 1
+  114  sudo tar -xvzf ~/Downloads/kafka.tgz --strip 1
+  115  sudo tar xzf ~/Downloads/kafka.tgz --strip 1
+  116  cd /usr/lib/jvm/
+  117  ls
+  118  export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
+  119  echo $JAVA_HOME
+  120  export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+  121  echo $JAVA_HOME
+  122  java -version
+  123  export PATH=$PATH:$JAVA_HOME/bin
+  124  echo $PATH
+  125  update-alternatives --config java
+  126  vi /etc/profile.d/java.sh
+  127  apt-get install zookeeperd
+  128  sudo apt-get install zookeeperd
+  129  systemctl status zookeeper
+  130  systemctl enable zookeeper
+  131  nano /etc/profile.d/java.sh
+  132  sudo nano /etc/profile.d/java.sh
+  133  sudo nano /etc/profile.d/kafka.sh
+  134  reboot
+  135  cd /opt/kafka/
+  136  ls
+  137  cd bin/
+  138  ls
+  139  ls -A
+  140  ls -l
+  141  /opt/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic TutorialTopic
+  142  echo "Hello, World" | kafka-console-producer.sh --broker-list localhost:9092 --topic TutorialTopic > /dev/null[A
+  143  echo "Hello, World" | ~/opt/kafka/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TutorialTopic > /dev/null
+  144  echo "Hello, World" | /opt/kafka/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TutorialTopic > /dev/null
+  145  /opt/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic TutorialTopic
+  146  sudo systemctl status zookeeper
+  147  sudo systemctl status kafka
+  148  cd ..
+  149  ls
+  150  cd config/
+  151  ls
+  152  cat server.properties 
+  153  cd /etc/systemd/system/k
+  154  cd /etc/systemd/system/
+  155  ls
+  156  cat kafka.service
+  157  nano zookeeper.service 
+  158  LS
+  159  ls
+  160  sudo nano kafka.service 
+  161  ls
+  162  cat kafka.service 
+  163  cat /opt/kafka/config/server.properties
+  164  cat server.properties 
+  165  ls
+  166  cat kafka.service 
+  167  sudo nano kafka.service 
+  168  Error opening log file '/opt/kafka/bin/../logs/kafkaServer-gc.log': Permission denied
+  169  su -l kafka
+  170  pwd
+  171  cd /opt/kafka/
+  172  ls
+  173  ls -l
+  174  ls -ld /home/oem/
+  175  visudo
+  176  sudo visudo
+  177  su - oem
+  178  ln -s /opt/kafka/config/server.properties /etc/kafka.properties
+  179  sudo ln -s /opt/kafka/config/server.properties /etc/kafka.properties
+  180  kafka-server-start.sh /etc/kafka.properties
+  181  pwd
+  182  reboot
+  183  kafka-server-start.sh /etc/kafka.properties
+  184  sudo kafka-server-start.sh /etc/kafka.properties
+  185  cd etc
+  186  cd /etc/
+  187  ls
+  188  cat kafka.properties 
+  189  cd ..
+  190  cd /opt/kafka/
+  191  ls
+  192  ls -a
+  193  ls -l
+  194  systemd --help
+  195  systemctl list-units --type=service 
+  196  systemctl stop kafka
+  197  sudo visudo 
+  198  systemctl stop kafka
+  199  systemctl list-units --type=service 
+  200  systemctl --help
+  201  systemctl clean kafka
+  202  sudo systemctl clean kafka
+  203  usermod -aG adm oem
+  204  sudo usermod -aG adm oem
+  205  sudo gedit /var/lib/polkit-1/localauthority/50-local.d/disable-passwords.pkla
+  206  kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TopicTest --from-beginning
+  207  cd tmp
+  208  pwd
+  209  mkdir temp
+  210  cd temp
+  211  wget https://github.com/kannan-raveendran-nair/prpc-pe-linux/archive/master
+  212  ls
+  213  gh repo clone zdmooc/prpc-pe-linux
+  214  sudo apt install gitsome
+  215  gh repo clone zdmooc/prpc-pe-linux
+  216  sudo apt install git
+  217  git config --global user.email "zidane.djamal@gmail.com"
+  218  git config --global user.name "zidane"
+  219  gh repo clone zdmooc/prpc-pe-linux
+  220  git clone zdmooc/prpc-pe-linux
+  221  git config --global user.name "zdmooc"
+  222  git clone zdmooc/prpc-pe-linux
+  223  git clone https://github.com/kannan-raveendran-nair/prpc-pe-linux.git
+  224  ls
+  225  pwd
+  226  cd prpc-pe-linux/
+  227  ls
+  228  bash prpc_pe.sh  --install-pega  --installation-media=/home/oem/temp/116897_PE8.5.1.zip
+  229  sudo -i
+  230  kafka-server-start.sh /etc/kafka.properties
+  231  kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic TopicTest
+  232  kafka-console-producer.sh --broker-list localhost:9092 --topic TopicTest
+  233  ls
+  234  cd temp/
+  235  ls
+  236  cd 11
+  237  pwd
+  238  # systemctl list-units --type=service 
+  239  systemctl --type=service
+  240  systemctl list-units --type=service
+  241  systemctl stop kafka
+  242  systemctl list-units --type=service
+  243  systemctl clean kafka
+  244  systemctl kill kafka
+  245  systemctl list-units --type=service
+  246  systemctl --type=service --state=active
+  247  systemctl
+  248  systemctl restrat kafka
+  249  systemctl --help
+  250  systemctl start kafka
+  251  systemctl reload kafka
+  252  systemctl stop kafka
+  253  systemctl reload kafka
+  254  systemctl status kafka
+  255  ls /opt/kafka/bin/
+  256  cd /etc/systemd/system/
+  257  ls zookeeper.service 
+  258  rm zookeeper.service 
+  259  sudo rm zookeeper.service 
+  260  ls zookeeper.service 
+  261  ls z
+  262  ls
+  263  sudo rm kafka.service 
+  264  ls
+  265  systemctl --type=service --state=active
+  266  kafka-server-start.sh /etc/kafka.properties
+  267  java -version
+  268  systemctl status zookeeper
+  269  apt-get install zookeeperd
+  270  sudo apt-get install zookeeperd
+  271  systemctl status zookeeper
+  272  systemctl daemon-reload
+  273  systemctl enable zookeeper
+  274  systemctl status zookeeper
+  275  systemctl daemon-reload
+  276  systemctl status zookeeper
+  277  systemctl stop zookeeper
+  278  systemctl --help
+  279  sudo systemctl reset-failed
+  280  systemctl daemon-reload
+  281  systemctl status zookeeper
+  282  su -l root
+  283  cd /etc/init.d/
+  284  ls
+  285  sudo /etc/init.d/ssh stop
+  286  sudo -i
+  287  zookeeper.service - LSB: centralized coordination service
+  288  sudo apt-get remove zookeeper
+  289  sudo apt-get remove --auto-remove zookeeper
+  290  sudo apt-get purge zookeeper
+  291  sudo apt-get purge --auto-remove zookeeper
+  292  pwd
+  293  cd Downloads/
+  294  ls -l
+  295  cd /pega
+  296  java - version
+  297  java -version
+  298  cd /usr/lib
+  299  ls
+  300  cd jvm/
+  301  ls
+  302  rm *
+  303  suso rm *
+  304  sudo rm *
+  305  ls
+  306  sudo rm -rf openjdk-11/
+  307  sudo rm -rf java-11-openjdk-amd64/
+  308  ls
+  309  sudo apt install openjdk-8-jdk openjdk-8-jre
+  310  java -version
+  311  cd /home/
+  312  ls
+  313  cd ~
+  314  ls
+  315  cd pr
+  316  cd prpc-pe-linux/
+  317  ls
+  318  cat install_pega.sh 
+  319  pwd
+  320  ls
+  321  cd ..
+  322  ls
+  323  cd prpc-pe-linux/
+  324  pwd
+  325  ls
+  326  pwd
+  327  bash prpc_pe.sh  --install-pega  --installation-media=/home/oem/temp/116897_PE8.5.1.zip
+  328  sudo bash prpc_pe.sh  --install-pega  --installation-media=/home/oem/temp/116897_PE8.5.1.zip
+  329  exit
+  330  cd /usr/local/pgsql/data 
+  331  sudo /usr/local/pgsql/data
+  332  cd usr
+  333  cd /usr/
+  334  ls
+  335  cd local/
+  336  ls
+  337  cd pgsql/
+  338  ls
+  339  cd da
+  340  cd data/
+  341  sudo cd data/
+  342  ls
+  343  cd data/
+  344  cd -h data/
+  345  /usr/lib/postgresql/9.5/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+  346  sudo /usr/lib/postgresql/9.5/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+  347  su /usr/lib/postgresql/9.5/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+  348  sudo /usr/lib/postgresql/9.5/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+  349  su
+  350  su oem
+  351  /usr/lib/postgresql/9.5/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+  352  su /usr/lib/postgresql/9.5/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+  353  sudo /usr/lib/postgresql/9.5/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+  354  su 
+  355  su -i
+  356  su --help
+  357  su /usr/lib/postgresql/9.5/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+  358  ls
+  359  cd tmp/
+  360  ls
+  361  bash prpc_pe.sh  --install-pega  --installation-media=116897_PE8.5.1.zip
+  362  sudo bash prpc_pe.sh  --install-pega  --installation-media=116897_PE8.5.1.zip
+  363  ls
+  364  cd prpc-pe-linux/
+  365  sudo bash prpc_pe.sh  --install-pega  --installation-media=116897_PE8.5.1.zip
+  366  sudo bash prpc_pe.sh -h --install-pega  --installation-media=116897_PE8.5.1.zip
+  367  clear
+  368  sudo bash prpc_pe.sh -h --install-pega  --installation-media=116897_PE8.5.1.zip
+  369  clear
+  370  sudo bash prpc_pe.sh -h --install-pega  --installation-media=116897_PE8.5.1.zip
+  371  sudo bash /opt/pega/prpc_pe.sh --start-server
+  372  sudo bash prpc_pe.sh -h --install-pega  --installation-media=/home/oem/tmp/116897_PE8.5.1.zip
+  373  sudo bash prpc_pe.sh -i --install-pega  --installation-media=/home/oem/tmp/116897_PE8.5.1.zip
+  374  sudo bash /opt/pega/prpc_pe.sh --start-server
+  375  /opt/pega/prpc_pe.sh --start-server
+  376  cd /opt//pega/
+  377  ls
+  378  cd /home/oem/tmp/
+  379  ls
+  380  cd prpc-pe-linux/
+  381  ls
+  382  pwd
+  383  bash prpc_pe.sh  --install-pega  --installation-media=/home/oem/tmp/116897_PE8.5.1.zip 
+  384  clear
+  385  adduser oem sudo
+  386  su -
+  387  su -i
+  388  su -
+  389  sudo ipconfig
+  390  sudo ifconfig
+  391  sudo passwd root
+  392  bash prpc_pe.sh  --install-pega  --installation-media=/home/oem/tmp/116897_PE8.5.1.zip 
+  393  su -
+  394  bash /opt/pega/prpc_pe.sh --start-server
+  395  cd /usr/lib/postgresql/9.5/bin/pg_ctl
+  396  cd /usr/lib/postgresql/9.5/
+  397  ls
+  398  cd bin
+  399  ls
+  400  cd pg_ctl
+  401  su -l postgres
+  402  top -c
+  403  ps -u postgres -o pid,comm,cmd,args | head
+  404  ps -u postgres -o pid,comm,cmd,args
+  405  ps -u postgres 
+  406  ps -u 
+  407  top -c
+  408  ls
+  409  cd tmp
+  410  ls
+  411  start_pega.sh
+  412  .start_pega.sh
+  413  ./start_pega.sh
+  414  sudo ./start_pega.sh
+  415  su ./start_pega.sh
+  416  su oem
+  417  ls
+  418  ./start_pega.sh
+  419  bash start_pega.sh
+  420  cd ..
+  421  ls
+  422  bash prpc_pe.sh  --install-pega  --installation-media=116897_PE8.5.1.zip
+  423  bash prpc_pe.sh  --install-pega  --installation-media=/home/oem/tmp/116897_PE8.5.1.zip
+  424  cd /tmp/pegatemp/
+  425  ls
+  426  history
+  427  cat /etc/os-release 
+  428  sudo apt update
+  429  sudo grep -i postgresql /etc/apt/sources.list
+  430  sudo vim /etc/apt/sources.list.d/pgdg.list
+  431  sudo nano /etc/apt/sources.list.d/pgdg.list
+  432  sudo apt update
+  433  sudo apt install postgresql 
+  434  history
+  435  ps aux | grep postgres
+  436  rm -rf /etc/postgresql/
+  437  rm -rf /var/lib/postgresql/
+  438  sudo rm -rf /var/lib/postgresql/
+  439  sudo rm -rf /etc/postgresql/
+  440  sudo apt-get --purge remove postgresql
+  441  sudo apt-get --purge remove postgresql-11 postgresql-11-pljava 
+  442  sudo apt-get --purge remove postgresql-client-11 postgresql-client-common postgresql-common 
+  443  sudo apt install postgresql 
+  444  dpkg -l
+  445  snap list
+  446  sudo df
+  447  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+  448  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+  449  sudo apt-get update
+  450  sudo apt-get -y install postgresql
+  451  apt-get install postgresql-12 
+  452  sudo apt-get install postgresql-12 
+  453  clear
