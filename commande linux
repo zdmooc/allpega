@@ -1,6 +1,10 @@
+
+#virtual box
 sudo apt-get install virtualbox-6.1.16
-    3  sudo apt-get install virtualbox-6.1
-    4  java -version
+
+
+  
+# kfka
     5  sudo systemctl enable kafka
     6  cd /opt/kafka/bin/
     7  /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic TutorialTopic --from-beginning
@@ -12,23 +16,13 @@ sudo apt-get install virtualbox-6.1.16
    13  systemctl daemon-reload
    14  sudo systemctl start kafka
    15  sudo systemctl status kafka
-   16  cd ..
-   17  ls
-   18  cd /home/oem/
-   19  ls
-   20  cd 'VirtualBox VMs'/
-   21  ls
-   22  cd vm
-   23  ls
-   24  cat logs
-   25  ls
-   26  cd Logs/
-   27  ls
-   28  ls -l
-   29  sudo apt update
-   30  sudo apt upgrade
-   31  sudo apt install openjdk-11-jdk
-   32  java -version
+   
+# install java
+  sudo apt update
+  sudo apt upgrade
+  sudo apt install openjdk-11-jdk
+  java -version
+   
    33  wget https://downloads.apache.org/kafka/2.6.0/kafka_2.13-2.6.0.tgz
    34  sudo tar xzf kafka_2.13-2.6.0.tgz
    35  ls
@@ -38,17 +32,7 @@ sudo apt-get install virtualbox-6.1.16
    39  ls
    40  sudo nano /etc/systemd/system/zookeeper.service
    41  sudo nano /etc/systemd/system/kafka.service
-   42  java -version
-   43  cd /opt
-   44  ls
-   45  cd /etc/
-   46  ls
-   47  cd java-11-openjdk/
-   48  ls
-   49  cd /usr/
-   50  ls
-   51  cd bin/
-   52  ls
+
    53  sudo systemctl daemon-reload
    54  sudo systemctl enable --now zookeeper
    55  java -version
