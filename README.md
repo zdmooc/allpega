@@ -186,4 +186,7 @@ Spécifiques système avancées
 
 * pg_basebackup:
 	- récupération de datas par une connexion à une autre DB (ex : init réplication)
+	
+	
+https://pgtune.leopard.in.ua/#/
 
